@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Income and Savings Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Income and Savings Manager</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Income</h2>
+      <div class="container">
+        <!-- Income Card -->
+        <div class="card">
+          <div class="input-group">
+            <label for="incomeAmount">Amount:</label>
+            <input type="number" id="incomeAmount" placeholder="Enter income amount">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Savings and Emergency Fund</h2>
+      <div class="container">
+        <!-- Savings Card -->
+        <div class="card">
+          <h3>Savings (%)</h3>
+          <input type="number" id="savingsPercentage" value="21.5">
+        </div>
+
+        <!-- Emergency Card -->
+        <div class="card">
+          <h3>Emergency (%)</h3>
+          <input type="number" id="emergencyPercentage" value="8">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Expenditure</h2>
+      <div class="container">
+        <!-- Housing Card -->
+        <div class="card">
+          <div class="input-group">
+            <label for="housingAmount">Housing:</label>
+            <input type="number" id="housingAmount" style="width: 250px;" placeholder="Enter housing amount">
+          </div>
+        </div>
+
+        <!-- Daily Use Card -->
+        <div class="card">
+          <div class="input-group">
+            <label for="dailyUse">Daily Use:</label>
+            <input type="number" id="dailyUse" style="width: 250px;" placeholder="Enter daily use amount">
+          </div>
+        </div>
+
+        <!-- Utilities Card -->
+        <div class="card">
+          <div class="input-group">
+            <label for="utilities">Utilities:</label>
+            <input type="number" id="utilities" style="width: 250px;" placeholder="Enter utilities amount">
+          </div>
+        </div>
+
+        <!-- Transportation Card -->
+        <div class="card">
+          <div class="input-group">
+            <label for="transportation">Transportation:</label>
+            <input type="number" id="transportation" style="width: 250px;" placeholder="Enter transportation amount">
+          </div>
+        </div>
+
+        <!-- Others Card -->
+        <div class="card">
+          <div class="input-group">
+            <label for="others">Others:</label>
+            <input type="number" id="others" style="width: 250px;" placeholder="Enter other expenses amount">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <!-- Summary Container -->
+      <div class="summary-box">
+        <!-- Income Total Card -->
+        <div class="summary-card">
+          <h3>Income Total:</h3>
+          <p id="incomeTotal">0.00</p>
+        </div>
+
+        <!-- Expenditure Total Card -->
+        <div class="summary-card">
+          <h3>Expenditure Total:</h3>
+          <p id="expenditureTotal">0.00</p>
+        </div>
+
+        <!-- Savings Total Card -->
+        <div class="summary-card">
+          <h3>Savings Total:</h3>
+          <p id="savingsTotal">0.00</p>
+        </div>
+
+        <!-- Emergency Fund Total Card -->
+        <div class="summary-card">
+          <h3>Emergency Fund Total:</h3>
+          <p id="emergencyTotal">0.00</p>
+        </div>
+
+        <!-- Remaining Income Card -->
+        <div class="summary-card">
+          <h3>Remaining Income:</h3>
+          <p id="remainingIncome">0.00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
