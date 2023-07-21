@@ -26,15 +26,16 @@ function updateSummary() {
   const transportation = parseFloat(transportationInput.value) || 0;
   const others = parseFloat(othersInput.value) || 0;
 
-  const savingsTotal = incomeAmount * savingsPercentage;
-  const emergencyTotal = incomeAmount * emergencyPercentage;
-  const expenditureTotal = housingAmount + dailyUse + utilities + transportation + others;
-  const remainingIncome = incomeAmount - savingsTotal - emergencyTotal - expenditureTotal;
+  const monthlyIncome = incomeAmount;
+  const monthlySavings = monthlyIncome * savingsPercentage;
+  const monthlyEmergency = monthlyIncome * emergencyPercentage;
+  const monthlyExpenditure = housingAmount + dailyUse + utilities + transportation + others;
+  const remainingIncome = monthlyIncome - monthlySavings - monthlyEmergency - monthlyExpenditure;
 
-  incomeTotalElement.textContent = incomeAmount.toFixed(2);
-  expenditureTotalElement.textContent = expenditureTotal.toFixed(2);
-  savingsTotalElement.textContent = savingsTotal.toFixed(2);
-  emergencyTotalElement.textContent = emergencyTotal.toFixed(2);
+  incomeTotalElement.textContent = monthlyIncome.toFixed(2);
+  expenditureTotalElement.textContent = monthlyExpenditure.toFixed(2);
+  savingsTotalElement.textContent = monthlySavings.toFixed(2);
+  emergencyTotalElement.textContent = monthlyEmergency.toFixed(2);
   remainingIncomeElement.textContent = remainingIncome.toFixed(2);
 }
 
